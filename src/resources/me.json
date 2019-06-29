@@ -1,0 +1,24 @@
+{
+    "me": {
+        "name": "Dharmesh Patel",
+        "age": 24,
+        "description": "Full Stack Developer",
+        "experience": "2.5 years",
+        "major-skills": [
+            "React",
+            "Angular",
+            "Java",
+            "Spring",
+            "SQL"
+        ],
+        "accomplishments": [
+            {
+                "name": "All Rounder in Team"
+            },
+            {
+                "name": "Insta Award"
+            }
+        ],
+        "seeking-job": true
+    }
+}

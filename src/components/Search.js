@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import SearchForm from "./SearchForm";
-import SearchResults from "./SearchResults";
+const SearchResults = React.lazy(() => import("./SearchResults"));
 
 class Search extends React.Component {
   constructor(props) {
@@ -22,7 +22,9 @@ class Search extends React.Component {
           restaurants={restaurants}
         />
         {restaurants.length > 0 ? (
-          <SearchResults restaurants={restaurants} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <SearchResults restaurants={restaurants} />
+          </Suspense>
         ) : flag ? (
           <h4>
             No search results &nbsp;
