@@ -24,7 +24,12 @@ class Search extends React.Component {
         {restaurants.length > 0 ? (
           <SearchResults restaurants={restaurants} />
         ) : flag ? (
-          <h4>No search results</h4>
+          <h4>
+            No search results &nbsp;
+            <span style={{ fontSize: 12 }}>
+              Load unsafe scripts if search does not work (http connection)
+            </span>
+          </h4>
         ) : (
           false
         )}
