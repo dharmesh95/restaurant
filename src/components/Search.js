@@ -28,9 +28,6 @@ class Search extends React.Component {
         ) : flag ? (
           <h4>
             No search results &nbsp;
-            {/* <span style={{ fontSize: 12 }}>
-              Load unsafe scripts if search does not work (http connection)
-            </span> */}
           </h4>
         ) : (
           false
