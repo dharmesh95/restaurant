@@ -3,6 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 import Axios from "axios";
 import { Restaurant } from "./../model/Restaurant";
+import {SEARCH_URL} from './../constants/url.constants';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -18,10 +19,7 @@ class SearchForm extends React.Component {
     };
 
     const search = () => event => {
-      Axios.get(
-        `http://opentable.herokuapp.com/api/restaurants?city=` +
-          this.state.cityName
-      )
+      Axios.get(SEARCH_URL + this.state.cityName)
         .then(res => {
           let restaurants = [];
           res.data.restaurants.forEach(restaurant => {
